@@ -1,0 +1,26 @@
+1. Go to this page: https://reactnative.dev/docs/environment-setup
+
+    Choose either yarn or npm and then. For this build we are using yarn. 
+    In your terminal write:
+    -->  yarn global add expo-cli 
+
+2. Download the folder template (similar to create-react-app but for react native)
+
+    ==> expo init signal-clone-yt
+
+3. In the termianl you will be given a bunch of options. 
+
+Press enter on --> blank a minimal app as clean as an empty canvas
+
+4. Cd into the folder and in the vsc termianl write:
+
+    --> yarn start
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDeuVLMxXg31tOEugnYXu2S4IdNtf2L5Jw",
+  authDomain: "signal-clone-yt-build-6ecca.firebaseapp.com",
+  projectId: "signal-clone-yt-build-6ecca",
+  storageBucket: "signal-clone-yt-build-6ecca.appspot.com",
+  messagingSenderId: "202576291532",
+  appId: "1:202576291532:web:68f6585bbac46eadaec469"
+};
