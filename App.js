@@ -22,7 +22,14 @@ export default function App() {
 			<Stack.Navigator>
 				{/* Stack nagivator will hold (wrap) 
 				all the screen components which are imported */}
-				<Stack.Screen name="Login" component={LoginScreen} />
+				<Stack.Screen
+					options={{ title: "let's Sign up" }}
+					// You can change the screen title with the above line of code
+					// If the above line of code doesn't exist, then the screen title
+					// will be the value of the key name below.
+					name="Login"
+					component={LoginScreen}
+				/>
 				{/* this is how you import a component.
 			You have to give the component a name and then import it.
 			Here the screen LoginScreen will have the name Login */}
