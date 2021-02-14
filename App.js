@@ -6,7 +6,7 @@ export default function App() {
 	return (
 		<View style={styles.container}>
 			{/* A view is the same as a div */}
-			<Text>Open up App.js to start working on your app!</Text>
+			<Text> Lets build signal !</Text>
 			<StatusBar style="auto" />
 		</View>
 	);

@@ -1,18 +1,37 @@
-1. Go to this page: https://reactnative.dev/docs/environment-setup
+Go to: https://docs.expo.io/get-started/installation/
+
+For my installation, i already had node installed, but i needed watchman.
+
+I had to install homebrew from here: https://docs.brew.sh/Installation
+
+Then i updated homebrew and upgraded it.
+
+Then i installed watchman with instructions from here: 
+https://facebook.github.io/watchman/docs/install#buildinstall
+
+Then i downloaded android studio manually following this exp tutorial: 
+https://docs.expo.io/workflow/android-studio-emulator/
+
+Then  i followed this tutorial to connect my app to android studio: 
+https://medium.com/@samailabalap/setting-up-react-native-with-expo-and-android-studio-on-ubuntu-18-04-84340bc2cc3c
+
+Now that i have android studio installed and ready and all the exp requirements ready.
+
+I installed expo-cli via react native here: https://reactnative.dev/docs/environment-setup
 
     Choose either yarn or npm and then. For this build we are using yarn. 
     In your terminal write:
     -->  yarn global add expo-cli 
 
-2. Download the folder template (similar to create-react-app but for react native)
+Download the folder template (similar to create-react-app but for react native)
 
     ==> expo init signal-clone-yt
 
-3. In the termianl you will be given a bunch of options. 
+In the termianl you will be given a bunch of options. 
 
-Press enter on --> blank a minimal app as clean as an empty canvas
+    Press enter on --> blank a minimal app as clean as an empty canvas
 
-4. Cd into the folder and in the vsc termianl write:
+Cd into the folder and in the vsc termianl write:
 
     --> yarn start
 
