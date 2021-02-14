@@ -1,20 +1,37 @@
 // foundational imports that come with the app
-import { StatusBar } from "expo-status-bar";
+// import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 
 // below imports are from react navigation
 import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+
+// below are the different screen components
+import LoginScreen from "./screens/LoginScreen";
+
+//! ------------------------------------------------- IMPORTS
+
+const Stack = createStackNavigator();
+// The contsant Stack is going to store all the screens
 
 export default function App() {
 	return (
 		<NavigationContainer>
-			<View style={styles.container}>
+			<Stack.Navigator>
+				{/* Stack nagivator will hold (wrap) 
+				all the screen components which are imported */}
+				<Stack.Screen name="Login" component={LoginScreen} />
+				{/* this is how you import a component.
+			You have to give the component a name and then import it.
+			Here the screen LoginScreen will have the name Login */}
+				{/* <View style={styles.container}> */}
 				{/* A view is the same as a div */}
-				<Text> Lets build signal !</Text>
-				<StatusBar style="auto" />
-			</View>
+				{/* <Text> Lets build signal !</Text>
+					<StatusBar style="auto" />
+				</View> */}
+			</Stack.Navigator>
 		</NavigationContainer>
 	);
 }
@@ -29,7 +46,7 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		justifyContent: "center"
 		// the css format is a bit different
-		// instead of justify-content its camel cast justifyContent
+		// instead of justify-content its camelcase-> justifyContent
 	}
 });
 

@@ -1,7 +1,10 @@
-IMPORTANT: In react, when you want to create a new component,
+IMPORTANT THINGS: In react, when you want to create a new component,
 rfce is used to output a ready made functional component. 
 In react native, rnfes (which stands for react native functional export with stylessheet) 
 is used to ouput a ready made component that contains a style sheet.
+
+To refersh the android simulator, click on the phone,
+then press rr on the keyboard (press the r keyboard button twice)
 
 -----------
 
