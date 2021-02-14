@@ -1,3 +1,10 @@
+IMPORTANT: In react, when you want to create a new component,
+rfce is used to output a ready made functional component. 
+In react native, rnfes (which stands for react native functional export with stylessheet) 
+is used to ouput a ready made component that contains a style sheet.
+
+-----------
+
 Go to: https://docs.expo.io/get-started/installation/
 
 For my installation, i already had node installed, but i needed watchman.
@@ -63,7 +70,13 @@ In order for the different screens/pages
 to stack on top of each other we have to use the stack navigator library:
 https://reactnavigation.org/docs/hello-react-navigation
 
-In the terminal write: 
+In the terminal write:
+
     --> yarn add @react-navigation/stack
 
+Next create the screens folder, which will contain 
+the apps different screens.
+And inside the screen folder create the login screen
+
+    --> LoginScreen.js (notice that its CamelCase)
 
