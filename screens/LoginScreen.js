@@ -20,9 +20,13 @@ const LoginScreen = () => {
 	// (password) The constant password contains a string
 	// (setPassword) And we declare that we will mainpulate this string
 	// By wrapping the string in a UseState()
+	// const signIn = () => {
+
+	// }
 
 	return (
-		<View>
+		<View style={styles.container}>
+			{/* This view will have a style called container */}
 			<StatusBar style="light" />
 			{/* The status bar is the top row that has the time, battery, wifi logo etc */}
 			<Image
@@ -86,6 +90,8 @@ const LoginScreen = () => {
 				type="outline"
 				// The button type identifies a specific type of pre-styled css,
 				// that will be called with the value 'outline'.
+				// onPress={signIn}
+				// The function signIn, which is defined above, is fired off once the register button is pressed
 				containerStyle={styles.button}
 				// This button will have a style (class) called button.
 				// Normally the style (class) would be declared with the key 'style'.
@@ -100,4 +106,8 @@ const LoginScreen = () => {
 
 export default LoginScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+	container: {},
+	inputContainer: {},
+	button: {}
+});
