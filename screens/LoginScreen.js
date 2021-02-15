@@ -67,6 +67,11 @@ const LoginScreen = () => {
 					// => setPassword (text)} --> then it fires of a function that stores this text in the constant password
 				/>
 			</View>
+			<Button
+				// Button is a react-native element.
+				title="Login"
+				// It has the text Login
+			/>
 		</View>
 	);
 };
