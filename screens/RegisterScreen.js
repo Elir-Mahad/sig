@@ -143,10 +143,30 @@ const RegisterScreen = ({ navigation }) => {
 				// When the button is pressed --> onPress={() =>
 				// go into the app.js and navigate to the screen that has the name 'Register' --> navigation.navigate("Register")}
 			/>
+			<View
+				style={{ height: 100 }}
+				// This ensures that when the keyboard pops up,
+				// it dosen't overlap with the whole view/div
+			/>
 		</KeyboardAvoidingView>
 	);
 };
 
 export default RegisterScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		alignItems: "center",
+		justifyContent: "center",
+		padding: 10,
+		backgroundColor: "white"
+	},
+	button: {
+		width: 200,
+		marginTop: 10
+	},
+	inputContainer: {
+		width: 300
+	}
+});

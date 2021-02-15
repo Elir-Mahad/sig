@@ -122,6 +122,11 @@ const LoginScreen = ({ navigation }) => {
 				// When the button is pressed --> onPress={() =>
 				// go into the app.js and navigate to the screen that has the name 'Register' --> navigation.navigate("Register")}
 			/>
+			{/* <View
+				// style={{ height: 100 }}
+				// This ensures that when the keyboard pops up,
+				// it dosen't overlap with the whole view/div
+			/> */}
 		</KeyboardAvoidingView>
 	);
 };
