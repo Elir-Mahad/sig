@@ -64,10 +64,3 @@ const styles = StyleSheet.create({
 		// instead of justify-content its camelcase-> justifyContent
 	}
 });
-
-// On the web, we user react router to go between pages.
-// On react native we use react native navigation.
-// In mobile, you have different screens(pages)
-// that are stacked/layered on top of each other,
-// so for example: when you swipe back it shows the screen beneath,
-// and when you swiple forward it goes to the next screen on top.

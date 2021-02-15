@@ -3,6 +3,13 @@ rfce is used to output a ready made functional component.
 In react native, rnfes (which stands for react native functional export with stylessheet) 
 is used to ouput a ready made component that contains a style sheet.
 
+On the web, we user react router to go between pages.
+On react native we use react native navigation.
+In mobile, you have different screens(pages)
+that are stacked/layered on top of each other,
+so for example: when you swipe back it shows the screen beneath,
+and when you swiple forward it goes to the next screen on top.
+
 To refersh the android simulator, click on the phone,
 then press rr on the keyboard (press the r keyboard button twice)
 

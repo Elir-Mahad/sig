@@ -29,18 +29,22 @@ const LoginScreen = ({ navigation }) => {
 	// }
 
 	return (
-		<KeyboardAvoidingView style={styles.container}>
-			{/* 'KeyboardAvoidingView' is specific type of view (div).
-				Normally, the keyboard is by default always visible on the phone app.
-				This view ensures that the keyboard on the phone
-				only becomes visible when the user clicks the input field.
-				And that it stays hidden at other times.
-				Here, we are wrapping the whole component 
-				with this particular type of view.
-				This view will have a style called 'container'.
-			*/}
-			<StatusBar style="light" />
-			{/* The status bar is the top row that has the time, battery, wifi logo etc */}
+		<KeyboardAvoidingView
+			// KeyboardAvoidingView' is specific type of view (div).
+			// Normally, the keyboard is by default always visible on the phone app.
+			// This view ensures that the keyboard on the phone
+			// only becomes visible when the user clicks the input field.
+			// And that it stays hidden at other times.
+			// Here, we are wrapping the whole component
+			// with this particular type of view.
+			style={styles.container}
+			// This view will have a style called 'container'.
+		>
+			<StatusBar
+				// The status bar is the top row that has the time, battery, wifi logo etc
+				style="light"
+				// The style light makes icons such as time/battery etc white
+			/>
 			<Image
 				//Image is a react-native-element.
 				// Here we declare that we are importing an image.
@@ -60,7 +64,7 @@ const LoginScreen = ({ navigation }) => {
 					// The Input field will have the placeholder text Email
 					autoFocus
 					// when the screen loads, it automatically puts the focus on the input field
-					type="Email"
+					type="email"
 					//
 					value={email}
 					//
