@@ -9,6 +9,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 // below are the different screen components
 import LoginScreen from "./screens/LoginScreen";
+import RegisterScreen from "./screens/RegisterScreen";
 
 //! ------------------------------------------------- IMPORTS
 
@@ -32,20 +33,19 @@ export default function App() {
 					will be pushed onto all the screens. 
 				 */}
 				<Stack.Screen
-					// options={{ title: "let's Sign up" }}
-					// You can change the screen title with the above line of code
-					// If the above line of code doesn't exist, then the screen title
-					// will be the value of the key name below.
+					// This is how you import a component.
 					name="Login"
+					// Give the component a name that will appear on header of the app  --> Login
 					component={LoginScreen}
+					// Import the component --> component={LoginScreen}
 				/>
-				{/* this is how you import a component.
-				You have to give the component a name and then import it.
-				Here the screen LoginScreen will have the name Login */}
-				{/* <View style={styles.container}>
-					<Text> Lets build signal !</Text>
-					<StatusBar style="auto" />
-				</View> */}
+				<Stack.Screen
+					// This is how you import a component.
+					name="Register"
+					// Give the component a name that will appear on header of the app --> Register
+					component={RegisterScreen}
+					// Import the component --> component={RegisterScreen}
+				/>
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

@@ -11,8 +11,11 @@ import { Button, Input, Image } from "react-native-elements";
 
 //!------------------------------------------------------------IMPORTS
 
-const LoginScreen = () => {
-	//
+const LoginScreen = ({ navigation }) => {
+	// The component LoginScreen will have the prop 'navigation'.
+	// This prop will give us the ability to:
+	// [a] navigate to this screen from another screen
+	// [b] navigate from this screen to another screen
 	const [email, setEmail] = useState("");
 	// (email) The constant email contains a string
 	// (setEmail) And we declare that we will mainpulate this string
@@ -108,6 +111,9 @@ const LoginScreen = () => {
 				// However, since this is a react native element
 				// the style (class) has to be declared with the key 'containerStyle'.
 				// like this --> containerStyle ={styles.button}
+				onPress={() => navigation.navigate("Register")}
+				// When the button is pressed --> onPress={() =>
+				// go into the app.js and navigate to the screen that has the name 'Register' --> navigation.navigate("Register")}
 			/>
 		</KeyboardAvoidingView>
 	);
