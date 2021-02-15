@@ -34,6 +34,10 @@ const RegisterScreen = ({ navigation }) => {
 
 	// !-----------------------------------------------USESTATE
 
+	const regiser = () => {};
+
+	//!-----------------------------------------------FUNCTIONS THAT WILL BE CALLED
+
 	return (
 		<KeyboardAvoidingView
 			// KeyboardAvoidingView' is specific type of view (div).
@@ -115,6 +119,8 @@ const RegisterScreen = ({ navigation }) => {
 					onChangeText={(text) => setImageUrl(text)}
 					// onChangeText={(text) --> onChangeText captures the text that was typed into the input field
 					// => setImageUrl (text)} --> 	then it fires of a function that stores this text in the constant imageUrl
+					// onSubmitEditing={register}
+					// When you hit enter, the register function will be triggered
 				/>
 			</View>
 		</KeyboardAvoidingView>

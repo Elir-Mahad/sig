@@ -24,9 +24,12 @@ const LoginScreen = ({ navigation }) => {
 	// (password) The constant password contains a string
 	// (setPassword) And we declare that we will mainpulate this string
 	// By wrapping the string in a UseState()
-	// const signIn = () => {
 
-	// }
+	// !-----------------------------------------------USESTATE
+
+	const signIn = () => {};
+
+	//!-----------------------------------------------FUNCTIONS THAT WILL BE CALLED
 
 	return (
 		<KeyboardAvoidingView
