@@ -1,5 +1,5 @@
 // Below are foundational imports that come with the app
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
@@ -8,7 +8,19 @@ import { StatusBar } from "expo-status-bar";
 // pre-styled elements
 import { Button, Input, Image } from "react-native-elements";
 
+//!------------------------------------------------------------IMPORTS
+
 const LoginScreen = () => {
+	//
+	const [email, setEmail] = useState("");
+	// (email) The constant email contains a string
+	// (setEmail) And we declare that we will mainpulate this string
+	// By wrapping the string in a UseState()
+	const [password, setPassword] = useState("");
+	// (password) The constant password contains a string
+	// (setPassword) And we declare that we will mainpulate this string
+	// By wrapping the string in a UseState()
+
 	return (
 		<View>
 			<StatusBar style="light" />
@@ -26,9 +38,34 @@ const LoginScreen = () => {
 			/>
 			<View style={styles.inputContainer}>
 				{/* This view will have a style called inputContainer */}
-				<Input placeholder="Email" />
-				{/* Input is a react native element. 
-					The Input field will have the placeholder text Email */}
+				<Input
+					//Input is a react native element.
+					placeholder="Email"
+					// The Input field will have the placeholder text Email
+					autoFocus
+					// when the screen loads, it automatically puts the focus on the input field
+					type="Email"
+					//
+					value={email}
+					//
+					onChangeText={(text) => setEmail(text)}
+					// onChangeText={(text) --> onChangeText captures the text that was typed into the input field
+					// => setEmail (text)} --> 	then it fires of a function that stores this text in the constant Email
+				/>
+				<Input
+					//Input is a react native element.
+					placeholder="Password"
+					// The Input field will have the placeholder text Password
+					secureTestEntry
+					// This will hide the password when its being typed in
+					type="password"
+					//
+					value={password}
+					//
+					onChangeText={(text) => setPassword(text)}
+					// onChangeText={(text) --> onChangeText captures the text that was typed into the input field
+					// => setPassword (text)} --> then it fires of a function that stores this text in the constant password
+				/>
 			</View>
 		</View>
 	);
