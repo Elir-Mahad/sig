@@ -79,6 +79,21 @@ const LoginScreen = () => {
 				// the style (class) has to be declared with the key 'containerStyle'.
 				// like this --> containerStyle ={styles.button}
 			/>
+			<Button
+				// Button is a react-native element.
+				title="Register"
+				// It has the text Register
+				type="outline"
+				// The button type identifies a specific type of pre-styled css,
+				// that will be called with the value 'outline'.
+				containerStyle={styles.button}
+				// This button will have a style (class) called button.
+				// Normally the style (class) would be declared with the key 'style'.
+				// Like this --> style={styles.button}.
+				// However, since this is a react native element
+				// the style (class) has to be declared with the key 'containerStyle'.
+				// like this --> containerStyle ={styles.button}
+			/>
 		</View>
 	);
 };
