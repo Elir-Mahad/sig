@@ -1,6 +1,7 @@
 // Below are foundational imports that come with the app
 import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { KeyboardAvoidingView } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 // Below is the import for reacte native elements -
@@ -25,8 +26,16 @@ const LoginScreen = () => {
 	// }
 
 	return (
-		<View style={styles.container}>
-			{/* This view will have a style called container */}
+		<KeyboardAvoidingView style={styles.container}>
+			{/* 'KeyboardAvoidingView' is specific type of view (div).
+				Normally, the keyboard is by default always visible on the phone app.
+				This view ensures that the keyboard on the phone
+				only becomes visible when the user clicks the input field.
+				And that it stays hidden at other times.
+				Here, we are wrapping the whole component 
+				with this particular type of view.
+				This view will have a style called 'container'.
+			*/}
 			<StatusBar style="light" />
 			{/* The status bar is the top row that has the time, battery, wifi logo etc */}
 			<Image
@@ -100,7 +109,7 @@ const LoginScreen = () => {
 				// the style (class) has to be declared with the key 'containerStyle'.
 				// like this --> containerStyle ={styles.button}
 			/>
-		</View>
+		</KeyboardAvoidingView>
 	);
 };
 
