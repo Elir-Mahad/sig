@@ -6,7 +6,14 @@ is used to ouput a ready made component that contains a style sheet.
 To refersh the android simulator, click on the phone,
 then press rr on the keyboard (press the r keyboard button twice)
 
-In the components View is the same as a div
+Terminology in react native is a bit different from regular web app terms. 
+Below are two lists, the left list has the terms from react native
+and the right has their equivalent from react.
+
+    React native -- React
+    View = div
+    Style = className
+
 
 -----------
 
