@@ -14,6 +14,8 @@ and the right has their equivalent from react.
     View = div
     Style = className
 
+In react native, flex-direction:column is a default setting.
+
 
 -----------
 
