@@ -10,6 +10,16 @@ that are stacked/layered on top of each other,
 so for example: when you swipe back it shows the screen beneath,
 and when you swiple forward it goes to the next screen on top.
 
+In react-native element we can specify text as h1,h2,h3 etc elements.
+To do that we have to remove 'Text' from the default import of: 
+    --> import { StyleSheet, View, Text } from "react-native";
+    So it will change to this:
+     --> import { StyleSheet, View } from "react-native";
+     
+Then import 'Text' from react-native-elements like this:
+    --> import { Text } from "react-native-elements";
+    
+
 To refersh the android simulator, click on the phone,
 then press rr on the keyboard (press the r keyboard button twice)
 

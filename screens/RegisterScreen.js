@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { KeyboardAvoidingView } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 // Below is the import for reacte native elements -
 // it's similar to material ui in the sense that it imports
 // pre-styled elements
-import { Button, Input, Image } from "react-native-elements";
+import { Button, Input, Image, Text } from "react-native-elements";
 
 //!-------------------------------------------------IMPORTS
 
@@ -34,7 +34,7 @@ const RegisterScreen = ({ navigation }) => {
 
 	// !-----------------------------------------------USESTATE
 
-	const regiser = () => {};
+	const register = () => {};
 
 	//!-----------------------------------------------FUNCTIONS THAT WILL BE CALLED
 
@@ -57,8 +57,10 @@ const RegisterScreen = ({ navigation }) => {
 			/>
 
 			<Text
+				// Text here is a react-native element.
 				h3
-				// The text will be specified as an h3 element
+				// In react-native element we can specify text as h1,h2,h3 etc elements
+				// This text will be specified as h3
 				style={{ marginBottom: 50 }}
 				// The text will have an in-line style
 			>
@@ -123,6 +125,24 @@ const RegisterScreen = ({ navigation }) => {
 					// When you hit enter, the register function will be triggered
 				/>
 			</View>
+			<Button
+				// Button is a react-native element.
+				title="Register"
+				// It has the text Register
+				raised
+				// The button type identifies a specific type of pre-styled css,
+				// that will be called with the value raised
+				containerStyle={styles.button}
+				// This button will have a style (class) called button.
+				// Normally the style (class) would be declared with the key 'style'.
+				// Like this --> style={styles.button}.
+				// However, since this is a react native element
+				// the style (class) has to be declared with the key 'containerStyle'.
+				// like this --> containerStyle ={styles.button}
+				onPress={register}
+				// When the button is pressed --> onPress={() =>
+				// go into the app.js and navigate to the screen that has the name 'Register' --> navigation.navigate("Register")}
+			/>
 		</KeyboardAvoidingView>
 	);
 };
