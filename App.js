@@ -17,13 +17,23 @@ const Stack = createStackNavigator();
 // The contsant Stack is going to store all the screens
 
 export default function App() {
+	const globalScreenOptions = {
+		// The constant globalScreenOptions stores the below css styles
+		headerStyle: { backgrounColor: "#2c6bed" },
+		headerTitleStyle: { color: "white" },
+		headerTintiColor: "white"
+	};
+
 	return (
 		<NavigationContainer>
-			<Stack.Navigator>
-				{/* Stack nagivator will hold (wrap) 
-				all the screen components which are imported */}
+			<Stack.Navigator screenOptions={globalScreenOptions}>
+				{/* Stack nagivator will wrap 
+					all the screen components which are imported.
+					The styles stored in the constant globalScreenOptions
+					will be pushed onto all the screens. 
+				 */}
 				<Stack.Screen
-					options={{ title: "let's Sign up" }}
+					// options={{ title: "let's Sign up" }}
 					// You can change the screen title with the above line of code
 					// If the above line of code doesn't exist, then the screen title
 					// will be the value of the key name below.
