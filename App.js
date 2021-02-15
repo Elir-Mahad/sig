@@ -1,5 +1,4 @@
-// foundational imports that come with the app
-// import { StatusBar } from "expo-status-bar";
+// below are foundational imports that come with the app
 import React from "react";
 import { StyleSheet } from "react-native";
 
@@ -41,11 +40,10 @@ export default function App() {
 					component={LoginScreen}
 				/>
 				{/* this is how you import a component.
-			You have to give the component a name and then import it.
-			Here the screen LoginScreen will have the name Login */}
-				{/* <View style={styles.container}> */}
-				{/* A view is the same as a div */}
-				{/* <Text> Lets build signal !</Text>
+				You have to give the component a name and then import it.
+				Here the screen LoginScreen will have the name Login */}
+				{/* <View style={styles.container}>
+					<Text> Lets build signal !</Text>
 					<StatusBar style="auto" />
 				</View> */}
 			</Stack.Navigator>

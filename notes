@@ -6,6 +6,8 @@ is used to ouput a ready made component that contains a style sheet.
 To refersh the android simulator, click on the phone,
 then press rr on the keyboard (press the r keyboard button twice)
 
+In the components View is the same as a div
+
 -----------
 
 Go to: https://docs.expo.io/get-started/installation/
@@ -82,4 +84,14 @@ the apps different screens.
 And inside the screen folder create the login screen
 
     --> LoginScreen.js (notice that its CamelCase)
+
+Install react native elements. 
+Read more here: https://reactnativeelements.com/docs
+In terminal write:
+
+    --> yarn add react-native-elements
+
+In LoginScreen add:
+    
+    --> import {Button, Input, Image} from "react-native-elements";
 
