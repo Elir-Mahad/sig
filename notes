@@ -121,3 +121,62 @@ In LoginScreen add:
     
     --> import {Button, Input, Image} from "react-native-elements";
 
+---------------PROCESS FOR ADDING CUSTOM FONTS
+
+1.  In the assets folder, create a fonts folder.
+
+2.  Download desired fonts from google fonts.
+
+3.  Move the specific .tff font file, to the fonts folder thats in your assets folder.
+
+4.  Go into the app.js and install the necessary dependencies for making custom fonts work
+
+    In the terminal type:
+    --> expo install expo-app-loading
+
+    Import to the app.js:
+    --> import * as Font from "expo-font";
+        import AppLoading from "expo-app-loading";
+
+5.  Create a function to assynchronously load fonts;
+    This function will be above " export default function App() "
+    
+    Here is an example: 
+        --> const getFonts = () =>
+                Font.loadAsync({
+                    "inconsolate-regular": require("./assets/fonts/Inconsolata-Regular.ttf")
+            });
+
+6.  Right under " export default function App() { "
+    (i.e, in the beginning of our App functional component)
+    we will initialize our fonts to make sure that no error
+    happens and to make sure that the fonts load before the 
+    app loads.
+
+    The code looks like this (comments about this code is in app.js of hakagure app): 
+
+        --> const [fontsLoaded, setFontsLoaded] = useState(false);
+
+            if (fontsLoaded) {
+                return <WelcomeScreen />;
+            } else {
+                // return (
+                <AppLoading
+                    //
+                    startAsync={getFonts}
+                    onFinish={() => setFontsLoaded(true)}
+                    onError={console.warn}
+                />;
+                // );
+            }
+
+7. Then in the style sheet, declare where you want to use the custom font.
+    Example: 
+            welcome_bodyText: {
+        --> fontFamily: "inconsolate-regular"
+            }
+
+8. The globalScreenOptions and the createStackNavigator command
+    must be under the fontsloaded conditional.
+    If they they are not, then the globalScreenOptions and the stack
+    will not work.
